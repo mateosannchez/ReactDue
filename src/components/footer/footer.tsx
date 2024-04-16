@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom";
 
 const footer = () => {
 
@@ -6,30 +6,63 @@ const footer = () => {
     <div className="footer">
       <div className="footer__container">
         <div className="footer__containerGrid">
-          <div className='footer__h1Flex'>
+
+          {/* <div className='footer__h1Flex'>
             <h1 className='footer__h1'>due</h1>
-          </div>
+          </div> */}
+          <NavLink to="/" className='footer__h1Flex'>
+            <h1 className="footer__h1">due</h1>
+          </NavLink>
 
           <div className='footer__transform'>
-            <ul style={{listStyle: "none"}}>
+            <ul style={{ listStyle: "none", margin: '0', padding: '0' }}>
               <li className='footer__liTitle'>Productos</li>
-              <li className='footer__li'><a className='footer__a' href="">Bóvedas</a></li>
-              <li className='footer__li'><a className='footer__a' href="">Pagos</a></li>
-              <li className='footer__li'><a className='footer__a' href="">Transferencias</a></li>
+              
+              <li className='footer__li'>
+                <NavLink to="/bovedas" className="footer__a">
+                  Bóvedas
+                </NavLink>
+              </li>
+
+              <li className='footer__li'>
+                <NavLink to="/pagos" className="footer__a">
+                Pagos
+                </NavLink>
+              </li>
+
+              <li className='footer__li'>
+                <NavLink to="/transferencias" className="footer__a">
+                Transferencias
+                </NavLink>
+              </li>
+              
             </ul>
           </div>
 
           <div className='footer__transform'>
-            <ul style={{listStyle: "none"}}>
+            <ul style={{ listStyle: "none", margin: '0', padding: '0' }}>
+
               <li className='footer__liTitle'>Empresa</li>
-              <li className='footer__li'><a className='footer__a' href="">Quiénes somos</a></li>
-              <li className='footer__li'><a className='footer__a' href="">Carreras profesionales</a></li>
-              <li className='footer__li'><a className='footer__a' href="">Prensa</a></li>
+              <li className='footer__li'>
+                <NavLink to="/Empresa" className="footer__a">
+                  Quiénes somos
+                </NavLink>
+              </li>
+              <li className='footer__li'>
+                <NavLink to="/Empresa" className="footer__a">
+                  Carreras profesionales
+                </NavLink>
+              </li>
+              <li className='footer__li'>
+                <NavLink to="/Empresa" className="footer__a">
+                  Prensa
+                </NavLink>
+              </li>
             </ul>
           </div>
 
           <div className='footer__transform'>
-            <ul style={{listStyle: "none"}}>
+            <ul style={{ listStyle: "none", margin: '0', padding: '0' }}>
               <li className='footer__liTitle'>Recursos</li>
               <li className='footer__li'><a className='footer__a' href="">Blog</a></li>
               <li className='footer__li'><a className='footer__a' href="">Centro de ayudas</a></li>
@@ -37,7 +70,7 @@ const footer = () => {
           </div>
 
           <div className='footer__transform'>
-            <ul style={{listStyle: "none"}}>
+            <ul style={{ listStyle: "none", margin: '0', padding: '0' }}>
               <li className='footer__liTitle'>Legal</li>
               <li className='footer__li'><a className='footer__a' href="">Condiciones generales</a></li>
               <li className='footer__li'><a className='footer__a' href="">Políticas de privacidad</a></li>
@@ -46,7 +79,7 @@ const footer = () => {
           </div>
 
 
-          <div className='footer__botones' style={{width: "100%"}}>
+          <div className='footer__botones' style={{ width: "100%" }}>
             <button className='footer__btn'>
               iniciar sesión
             </button>
